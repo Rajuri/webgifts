@@ -1,1 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./app/scss/variables.scss";
+@import "./app/scss/mixins.scss";
+
+*{
+    // font-family: 'Baloo Chettan', ;
+    // font-family: 'Cinzel Decorative', ;
+font-family: 'Montserrat Alternates';
+font-size: 1rem;
+}
+h1,h2,h3,h4,h5{
+  font-family: 'Cinzel Decorative', ;
+}
+button{
+    outline: none !important;
+    box-shadow: none !important;
+}
+.flex-1{
+    flex:1;
+}
+::-webkit-scrollbar-track
+{
+    background-color: #ddd;
+    border-radius: 5px;
+}
+::-webkit-scrollbar
+{
+	width: 8px;
+    background-color: #ddd;
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb
+{
+	background-color: #555;
+    border-radius: 5px;
+}   

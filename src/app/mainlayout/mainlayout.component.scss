@@ -1,0 +1,16 @@
+:host{
+    flex:1;
+}
+
+nav{
+    .navbar-nav{
+        display: none;
+    }
+    .logoSec {
+    display: inline-block;
+    padding:5px 15px;
+    img{
+        width:120px;
+       }
+    }
+}
