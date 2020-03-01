@@ -37,6 +37,6 @@ button{
 }
 ::-webkit-scrollbar-thumb
 {
-	background-color: #555;
+	background-color: lighten($theme-color, 15%);
     border-radius: 5px;
 }   
