@@ -6,7 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent implements OnInit {
-
+  isSidebarOpen: boolean = false;
+  clickEvent(){
+      this.isSidebarOpen = !this.isSidebarOpen;       
+  }
   constructor() { }
 
   ngOnInit() {
