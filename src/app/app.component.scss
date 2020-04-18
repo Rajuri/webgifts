@@ -1,0 +1,18 @@
+@import "../app/scss/variables.scss";
+@import "../app/scss/mixins.scss";
+
+.rootContainer{
+    background-color: $theme-color;
+    // &:before{
+    //     content: '';
+    //     height: 90px;
+    //     width: 100%;
+    //     background-color: $theme-color;
+    //     position: absolute;
+    //     left: 0;
+    //     right: 0;
+    //     top:0;
+    //     z-index: -1;
+    // }
+
+}
