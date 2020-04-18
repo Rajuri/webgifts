@@ -1,0 +1,120 @@
+@import "../../scss/variables.scss";
+@import "../../scss/mixins.scss";
+
+.navMenu {
+  position: fixed;
+  left: 0;
+  margin: auto;
+  z-index: 999;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  height: calc(100% - 200px);
+  top: 0;
+  bottom: 0;
+  width: 220px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 0 15px 15px 0;
+  margin-left: -180px;
+  transition: 0.5s all ease;
+
+  .navbar {
+    padding: 0;
+
+    ul {
+      padding: 15px 0 !important;
+      width: 100%;
+
+      li {
+        margin: 0px 0;
+        position: relative;
+
+        .nav-link,
+        a {
+          display: block;
+          padding: 0.5rem 0.7rem;
+          font-size: 0.9rem;
+          color: lighten($black-color, 30%);
+          display: flex;
+          color: #ffffff;
+
+          i {
+            margin-left: auto;
+            width: 20px;
+            text-align: center;
+          }
+
+          &.dropdown-toggle::after {
+            display: none;
+          }
+        }
+
+        .dropdown-menu {
+          position: relative;
+          width: 100%;
+          border: 2px solid $second-color;
+        }
+      }
+    }
+
+    &.servicesMenu {
+      // padding: 10px 0;
+      transition: ease all 0.8s;
+      width: 220px;
+
+      ul {
+        background-color: $second-color;
+      }
+    }
+  }
+
+  &.sidebarOpened,
+  &:hover {
+    margin-left: 0;
+    background: rgba(255, 255, 255, 1);
+
+    li {
+      a {
+        color: #555555 !important;
+        padding: 0.5rem 1rem !important;
+      }
+    }
+
+    .servicesMenu {
+      width: calc(100% - 20px);
+      margin: auto;
+
+      ul {
+        border-radius: 15px;
+
+        li {
+          &>a {
+            color: #ffffff !important;
+          }
+        }
+
+      }
+    }
+
+  }
+
+  .toggleSidebarBtn {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    transition: 0.5s all ease;
+  }
+
+  &.sidebarOpened {
+    margin-left: 0;
+
+    .toggleSidebarBtn {
+      right: 0;
+      left: auto;
+    }
+  }
+
+
+
+
+}

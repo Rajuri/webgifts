@@ -1,0 +1,47 @@
+<div class="navMenu" [ngClass]="{'sidebarOpened': isSidebarOpen}">
+  <!-- <button class="toggleSidebarBtn" (click)="clickEvent()">M</button> -->
+  <div class="appMenu">
+
+    <nav class="navbar navbar-expand-lg">
+      <ul class="navbar-nav flex-column">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Cart <i class="fas fa-shopping-cart"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Orders <i class="fas fa-sort-amount-up-alt"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Notifications <i class="fas fa-bell"></i></a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+
+  <nav class="navbar servicesMenu navbar-expand-lg">
+    <ul class="navbar-nav mr-auto flex-column">
+      <li class="nav-item dropdown active">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Web Presentations <i class="fas fa-mobile-alt"></i>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" [routerLink]="'marriage'" routerLinkActive>Anniversaries <i
+              class="fas fa-grin-hearts"></i></a>
+          <a class="dropdown-item" [routerLink]="'birthday'" routerLinkActive>Birthdays <i
+              class="fas fa-birthday-cake"></i></a>
+          <a class="dropdown-item" [routerLink]="'marriage'" routerLinkActive>Love Proposals <i
+              class="far fa-heart"></i></a>
+          <a class="dropdown-item" [routerLink]="'marriage'" routerLinkActive>Valentines Day <i
+              class="far fa-heart"></i></a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Gifting <i class="fas fa-gift"></i></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Web Letters <i class="far fa-envelope"></i></a>
+      </li>
+    </ul>
+  </nav>
+</div>

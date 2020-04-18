@@ -1,0 +1,11 @@
+<div class="themesContainer  ml-auto pl-5 pr-3">
+  <div class="overflow-auto d-flex h-100">
+    <h3>Anniversaries</h3>
+    <div class="flex-1 leftSec pl-0 pr-4" *ngFor="let theme of [1,2,3,4]" (click)="goToEventsPage()">
+      <!-- <a [routerLink]="'../birthday'">Go to Next</a> -->
+      <div class="theme mb-3">
+        <img src="../../assets/images/themes/theme2.png" class="img-fluid">
+      </div>
+    </div>
+  </div>
+</div>
