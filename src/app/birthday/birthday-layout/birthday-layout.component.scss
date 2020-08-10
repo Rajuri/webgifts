@@ -1,0 +1,34 @@
+@import '../../scss/mixins.scss';
+
+@include themeEditor;
+:host{
+    width: 100%;    
+    }
+  
+    .themeEditorContainer{
+        height: 100%;
+    }
+    
+    .themeEditorContainer .selectedTheme{
+        padding: 30px;
+        width: 660px;
+        background: #ffffff;
+        height: 100%;
+        /* margin-top: 30px; */
+        /* border-radius: 0; */
+        /* margin-right: 0; */
+        /* overflow: auto; */
+    }
+    .themeEditorContainer .selectedTheme .orgTheme{
+    background: #333;
+    border-radius: 30px;
+    height: 100%;
+    width: 600px;
+    overflow: hidden;
+    } 
+    .titleSection{
+        color: #fff;
+    }
+    .logoSection img {
+        width: 300px;
+    }

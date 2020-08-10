@@ -2,12 +2,16 @@
 @import "./app/scss/variables.scss";
 @import "./app/scss/mixins.scss";
 
+
 * {
   // font-family: 'Baloo Chettan', ;
   // font-family: 'Cinzel Decorative', ;
   font-family: 'Montserrat Alternates';
   font-size: 1rem;
 }
+
+
+
 
 p {
   line-height: 2rem;
