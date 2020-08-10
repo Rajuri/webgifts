@@ -4,28 +4,38 @@
 :host{
     width: 100%;    
     }
-  
+    h3{
+        @include align-all-center;
+        .backBtn{
+            background-color: transparent;
+            border: 0;
+           
+        }
+    }
+ 
     .themeEditorContainer{
         height: 100%;
+        .selectedTheme{
+            padding: 30px;
+            width: 660px;
+            background: #ffffff;
+            height: 100%;
+            /* margin-top: 30px; */
+            /* border-radius: 0; */
+            /* margin-right: 0; */
+            /* overflow: auto; */
+            .orgTheme{
+                background: #333;
+                border-radius: 30px;
+                height: 100%;
+                width: 600px;
+                overflow: auto;
+                } 
+        }
     }
     
-    .themeEditorContainer .selectedTheme{
-        padding: 30px;
-        width: 660px;
-        background: #ffffff;
-        height: 100%;
-        /* margin-top: 30px; */
-        /* border-radius: 0; */
-        /* margin-right: 0; */
-        /* overflow: auto; */
-    }
-    .themeEditorContainer .selectedTheme .orgTheme{
-    background: #333;
-    border-radius: 30px;
-    height: 100%;
-    width: 600px;
-    overflow: hidden;
-    } 
+
+
     .titleSection{
         color: #fff;
     }

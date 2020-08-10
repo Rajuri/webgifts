@@ -9,3 +9,8 @@
         display: none !important;
     }
 }
+@mixin align-all-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
