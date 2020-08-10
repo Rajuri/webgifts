@@ -8,10 +8,12 @@ const routes: Routes = [
   {
     path: '',
     component: EditorLayoutComponent,
-  },
-  {
-    path: 'bdt1',
-    component: Bdt101Component,
+    children:[
+      {
+        path: 'bdt1',
+        component: Bdt101Component,
+      }
+    ]
   },
 ];
 
