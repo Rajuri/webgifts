@@ -25,9 +25,13 @@
             }
             .card:nth-child(even) {
                 background: #d3a53b;
+                border-left: 5px solid #efc159;
+                border-radius: 0;
             }
             .card:nth-child(odd) {
                 background: #efc159;
+                border-left: 5px solid #d3a53b;
+                border-radius: 0;
             }
             .card-body {
                 background: #ffebbf;
