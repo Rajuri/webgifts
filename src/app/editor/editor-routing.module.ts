@@ -12,10 +12,17 @@ const routes: Routes = [
       {
         path: 'bdt1',
         component: Bdt101Component,
+      },
+      {
+        path: '',
+        pathMatch:'full',
+        redirectTo:'bdt1'
       }
     ]
   },
+ 
 ];
+
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
