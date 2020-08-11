@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+import { PaymentComponent }from './payment/payment.component'
+
 const routes: Routes = [
   {
     path: 'home',
@@ -10,6 +12,10 @@ const routes: Routes = [
     path: 'editor',
     loadChildren: () =>
       import('./editor/editor.module').then((m) => m.EditorModule),
+  },
+  {
+    path: 'payment',
+    component:PaymentComponent
   },
   {
     path: '',
