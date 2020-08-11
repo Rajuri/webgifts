@@ -1,14 +1,97 @@
 @import '../../scss/mixins.scss';
-
+@import '../../scss/variables.scss';
+// @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Chilanka&family=Dancing+Script:wght@400;500;600;700&family=Great+Vibes&family=Russo+One&display=swap');
 @include themeEditor;
 :host{
     width: 100%;    
+    h3,h4,h5{
+        font-family: $montserrat-alternates;            
+    // $baloo-chettan: 'Baloo Chettan';
+    // $cinzel-decorative: 'Cinzel Decorative';
+    // $pacifico:'Pacifico';
+    // $chilanka:'Chilanka';
+    // $dancing:'Dancing';
+    // $great-vibes:'Great Vibes';
+    // $russo-one:'Russo One';
+        }
+        .accordion{
+            .card-header {
+                padding: 0;
+                button{
+                    color: #ffffff;
+                    // font-size: 1rem;
+                    font-weight: bold;
+                }
+            }
+            .card:nth-child(even) {
+                background: #d3a53b;
+            }
+            .card:nth-child(odd) {
+                background: #efc159;
+            }
+            .card-body {
+                background: #ffebbf;
+                & > label{
+                    font-size: 0.9rem;
+                }
+                .form-group{
+                    .form-control {
+                        font-size: 0.9rem;
+                    }                      
+                    label{
+                        font-size: 0.9rem;
+                        color: #000000;
+                    }
+                }
+            }
+           .form-group{
+                .form-control {
+                    color: #495057;
+                    background-color: #fff;
+                    border: 1px solid #ffebbf;
+                    border-radius: 1.5rem 1.5rem;
+                }
+           }
+         
+            .input-group {
+                .custom-file {
+                    height: 36px;
+                    .custom-file-label {
+                        font-size: 0.9rem;  
+                        border-radius: 1.5rem ;  
+                        border-color: #ffebbf;              
+                    }
+                    .custom-file-label::after {
+                        color: #ffffff;
+                        background-color: #cca039;
+                        border-radius: 0 1.5rem 1.5rem 0;
+                     
+                    }
+                }
+                .input-group-text {
+                    font-size: 0.9rem;
+                    height: 36px;
+                    border-radius: 0 1.5rem 1.5rem 0;
+                    color: #ffffff;
+                    background-color: #cca039;
+                    border-color: #ffebbf;
+                }
+              
+            }
+        }    
     }
-    h3{
-        @include align-all-center;
+    h2.heading{
+        // @include align-all-center;
+        color: #ffffff;
         .backBtn{
             background-color: transparent;
             border: 0;
+            i{
+                vertical-align: middle;
+                font-size: 1.5rem;
+                vertical-align: middle;
+                color: rgba(255, 255, 255, 0.5);
+            }
            
         }
     }
@@ -20,6 +103,7 @@
             width: 660px;
             background: #ffffff;
             height: 100%;
+            overflow: auto;
             /* margin-top: 30px; */
             /* border-radius: 0; */
             /* margin-right: 0; */
@@ -31,6 +115,26 @@
             //     width: 600px;
             //     overflow: auto;
             //     } 
+        }
+        .urlFormGroup{
+            label{
+                font-size: 0.85rem;
+                font-weight: bold;
+                color: #ffbbdf;
+            }
+            .input-group-text{
+                background: rgba(255,255,255,0.3);
+                font-size: 0.8rem;
+                border: 0;
+                color:#ffffff;
+                border-radius: 50px 0 0 50px ;
+            }
+            .form-control{
+                border: 0;
+                color:#ffffff;
+                background: rgba(255,255,255,0.15);
+                border-radius: 0 50px 50px 0;
+            }
         }
     }
     

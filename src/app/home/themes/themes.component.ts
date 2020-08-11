@@ -12,6 +12,6 @@ export class ThemesComponent implements OnInit {
 
   goToEventsPage() {
     console.log('dd');
-    this._router.navigate(['../birthday']);
+    this._router.navigate(['../editor']);
   }
 }

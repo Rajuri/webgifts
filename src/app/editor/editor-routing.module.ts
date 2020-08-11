@@ -16,9 +16,13 @@ const routes: Routes = [
       {
         path: '',
         pathMatch:'full',
-        redirectTo:'bdt1'
+        redirectTo:'bdt101'
       }
     ]
+  },
+  {
+    path: 'preview',
+    component: Bdt101Component,
   },
  
 ];

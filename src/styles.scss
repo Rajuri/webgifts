@@ -6,13 +6,15 @@
 * {
   // font-family: 'Baloo Chettan', ;
   // font-family: 'Cinzel Decorative', ;
-  font-family: 'Montserrat Alternates';
+  font-family: $montserrat-alternates;
   font-size: 1rem;
 }
 
 
 
-
+input, .custom-file-label{
+  box-shadow: none !important;
+}
 p {
   line-height: 2rem;
 }
