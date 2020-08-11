@@ -10,11 +10,15 @@ const routes: Routes = [
     component: EditorLayoutComponent,
     children:[
       {
-        path: 'bdt1',
+        path: '',
         component: Bdt101Component,
       }
     ]
   },
+  {
+    path: 'bdt1',
+    component: Bdt101Component,
+  }
 ];
 
 @NgModule({
