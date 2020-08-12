@@ -32,11 +32,9 @@ export class PaymentComponent implements OnInit {
         "name": "Durga",
         "description": "Durga Transaction",
         "image": "https://example.com/your_logo",
-        "order_id": "order_FPLbMKeHLJWumN", //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+        "order_id": "order_FPT6Gl01Rm29JM", //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
         "handler": function (response){
-            alert(response.razorpay_payment_id);
-            alert(response.razorpay_order_id);
-            alert(response.razorpay_signature)
+            console.log(response);
         },
     };
     var rzp1 = new Razorpay(options);
