@@ -1,47 +1,53 @@
-<div class="modal fade" id="ImgCropDialog">
+<div class="modal fade imgCorpDialog " id="ImgCropDialog">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title">Preview and Cropping</h4>
-        <button type="button" class="close">&times;</button>
-      </div>
-
       <div class="modal-body p-0">
-      <div class="croppingSec d-flex flex-row h-100 w-100">
-      <div class="flex-1 p-3">
-        <div *ngFor="let file of carouselFiles" class=""  (click)="previewImage(file)">
-          <img *ngIf="file" [src]="file.url" width="100px" height="100px" />
+      <div class="croppingSec d-flex flex-row flex-1 h-100 w-100">       
+        <div class="groupImages flex-1 d-flex flex-column">
+          <div class="modal-header">
+            <h4 class="modal-title">Preview and Cropping</h4>
+            <button type="button" class="close">&times;</button>
+          </div>
+          <div class="flex-1 overflow-auto">
+            <div class="droppedImagesBasket d-flex">
+              <div *ngFor="let file of carouselFiles" class="" (click)="previewImage(file)">
+                <img *ngIf="file" [src]="file.url" width="100px" height="100px" />
+              </div>
+            </div>
+          </div>        
+          <div class="modal-footer">
+            <button type="button" class="theme-btn2" (click)="saveCarouselImages()">Submit</button>
+            <button type="button" class="theme-btn1" (click)="closePopup()">Close</button>
+            <!-- <button type="button" id="close-modal" data-dismiss="modal" style="display: none;">
+              Close
+            </button> -->
+          </div>
         </div>
-        <button type="button" class="btn btn-primary" (click)="confirmImageCrop()">
-          Crop
-        </button>
-        <button type="button" class="btn btn-danger" (click)="cancelImageCrop()">
-          Cancel
-        </button>
-      </div>
-        
-       <div class="previewImg p-3">
-        <div *ngIf="!currentCroppingImage">
+       <div class="previewImg p-4 d-flex flex-column">
+        <div *ngIf="!currentCroppingImage" class="cropingImgBlock flex-1">
           <img [src]="currentSelectedImage" width="200px" height="200px" />
-          <button (click)="cropImage()">Crop</button>
+          <button (click)="cropImage()" class="cropBtn"><i class="fas fa-crop"></i></button>
         </div>
-        <div *ngIf="currentCroppingImage">
+        <div *ngIf="currentCroppingImage" class="cropingImgBlock flex-1">
           <image-cropper [imageFile]="currentCroppingImage" [maintainAspectRatio]="true" [aspectRatio]="4 / 3"
             format="png" (imageCropped)="imageCropped($event)" (imageLoaded)="imageLoaded()"
             (cropperReady)="cropperReady()" (loadImageFailed)="loadImageFailed()"></image-cropper>        
         </div>
+        <div class="btnSec d-flex pt-3">
+          <button type="button" class="theme-btn2 mr-2" (click)="confirmImageCrop()">
+            Crop
+          </button>
+          <button type="button" class="theme-btn1" (click)="cancelImageCrop()">
+            Cancel
+          </button>
+        </div>
        </div>
       </div>
 
+        
       </div>
 
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" (click)="saveCarouselImages()">Submit</button>
-        <button type="button" class="btn btn-danger" (click)="closePopup()">Close</button>
-        <button type="button" id="close-modal" data-dismiss="modal" style="display: none;">
-          Close
-        </button>
-      </div>
+     
     </div>
   </div>
 </div>

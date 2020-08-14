@@ -81,13 +81,24 @@ button {
     border-radius: 50%;
     outline: none;
     color: transparent;
-    border: 3px solid #ffffff;
+    border:3px solid #dddddd;
   }
+}
+.theme-btn1{
+  @include theme-btn1;
+}
+.theme-btn2{
+  @include theme-btn2;
 }
 .modal{
   .modal-dialog{
     .modal-content {
       border-radius: 2rem;
+      // .modal-body{
+      //   height: 500px;
+      //   display: flex;
+      //   flex-direction: column;
+      // }
       .modal-header{
         .modal-title {
           margin-bottom: 0;
