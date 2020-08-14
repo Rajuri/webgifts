@@ -11,6 +11,8 @@ import { CropperModalComponent } from '../components/cropper-modal/cropper-modal
 import { ColorPickModule } from '../color-pick/color-pick.module';
 
 import { DragDirective } from '../utilities/common_directives';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,8 +26,10 @@ import { DragDirective } from '../utilities/common_directives';
     CommonModule,
     EditorRoutingModule,
     ImageCropperModule,
-    SlickCarouselModule,
     ColorPickModule,
-  ],
+    SlickCarouselModule,
+    FormsModule,
+    ReactiveFormsModule
+  ]
 })
 export class EditorModule {}

@@ -10,6 +10,8 @@ declare var $: any;
   styleUrls: ['./editor-layout.component.scss'],
 })
 export class EditorLayoutComponent implements OnInit {
+  headerPattern : boolean = true;
+  bodyBg : boolean = true;
   @ViewChild('profilePicInput', { static: false }) profilePicInput: ElementRef;
   carouselImages = [];
   files: FileHandle[] = [];
@@ -29,7 +31,7 @@ export class EditorLayoutComponent implements OnInit {
     if (e && e.target && e.target.files && e.target.files.length) {
       this.files = this.commonSrvc.generateImageUrlToView(e.target.files);
       setTimeout(() => {
-        $('#myModal').modal('show');
+        $('#ImgCropDialog').modal('show');
       }, 100);
     }
   }
@@ -39,7 +41,7 @@ export class EditorLayoutComponent implements OnInit {
   filesDropped(files: FileHandle[]): void {
     this.files = [...this.files, ...files];
     setTimeout(() => {
-      $('#myModal').modal('show');
+      $('#ImgCropDialog').modal('show');
     }, 100);
     // this.croppingFile = this.files[0].file;
   }

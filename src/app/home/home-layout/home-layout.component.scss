@@ -45,6 +45,9 @@ h1 {
           border: 5px solid lighten($theme-color, 20%);
         }
       }
+      .dropdown-toggle::after{
+        display: none;
+      }
     }
   }
 

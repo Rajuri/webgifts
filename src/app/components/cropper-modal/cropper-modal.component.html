@@ -1,15 +1,26 @@
-<div class="modal fade" id="myModal">
-  <div class="modal-dialog">
+<div class="modal fade" id="ImgCropDialog">
+  <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title">Modal Heading</h4>
+        <h4 class="modal-title">Preview and Cropping</h4>
         <button type="button" class="close">&times;</button>
       </div>
 
-      <div class="modal-body">
-        <div *ngFor="let file of carouselFiles" class="d-inline" (click)="previewImage(file)">
+      <div class="modal-body p-0">
+      <div class="croppingSec d-flex flex-row h-100 w-100">
+      <div class="flex-1 p-3">
+        <div *ngFor="let file of carouselFiles" class=""  (click)="previewImage(file)">
           <img *ngIf="file" [src]="file.url" width="100px" height="100px" />
         </div>
+        <button type="button" class="btn btn-primary" (click)="confirmImageCrop()">
+          Crop
+        </button>
+        <button type="button" class="btn btn-danger" (click)="cancelImageCrop()">
+          Cancel
+        </button>
+      </div>
+        
+       <div class="previewImg p-3">
         <div *ngIf="!currentCroppingImage">
           <img [src]="currentSelectedImage" width="200px" height="200px" />
           <button (click)="cropImage()">Crop</button>
@@ -17,14 +28,11 @@
         <div *ngIf="currentCroppingImage">
           <image-cropper [imageFile]="currentCroppingImage" [maintainAspectRatio]="true" [aspectRatio]="4 / 3"
             format="png" (imageCropped)="imageCropped($event)" (imageLoaded)="imageLoaded()"
-            (cropperReady)="cropperReady()" (loadImageFailed)="loadImageFailed()"></image-cropper>
-          <button type="button" class="btn btn-primary" (click)="confirmImageCrop()">
-            Crop
-          </button>
-          <button type="button" class="btn btn-danger" (click)="cancelImageCrop()">
-            Cancel
-          </button>
+            (cropperReady)="cropperReady()" (loadImageFailed)="loadImageFailed()"></image-cropper>        
         </div>
+       </div>
+      </div>
+
       </div>
 
       <div class="modal-footer">

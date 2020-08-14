@@ -7,10 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Bdt101Component implements OnInit {
   slides = [
-    { img: 'http://placehold.it/350x150/000000' },
-    { img: 'http://placehold.it/350x150/111111' },
-    { img: 'http://placehold.it/350x150/333333' },
-    { img: 'http://placehold.it/350x150/666666' },
+    {img: "assets/images/themes/images/slide1.png"},
+    {img: "assets/images/themes/images/slide2.png"},
+    {img: "assets/images/themes/images/slide1.png"},
+    {img: "assets/images/themes/images/slide2.png"}
   ];
   slideConfig = { slidesToShow: 2, slidesToScroll: 2 };
 

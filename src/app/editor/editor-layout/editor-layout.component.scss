@@ -15,37 +15,62 @@
     // $russo-one:'Russo One';
         }
         .accordion{
-            .card-header {
-                padding: 0;
-                button{
-                    color: #ffffff;
-                    // font-size: 1rem;
-                    font-weight: bold;
-                }
-            }
-            .card:nth-child(even) {
-                background: #d3a53b;
-                border-left: 5px solid #efc159;
-                border-radius: 0;
-            }
-            .card:nth-child(odd) {
-                background: #efc159;
-                border-left: 5px solid #d3a53b;
-                border-radius: 0;
-            }
-            .card-body {
-                background: #ffebbf;
-                & > label{
-                    font-size: 0.9rem;
-                }
-                .form-group{
-                    .form-control {
+            background: #ff4aaa;
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 4px 0px 14px rgba(0,0,0,0.2);
+            padding: 10px;
+            .card{
+                border-top: 1px solid #ff60b4 !important;
+                border: 0;
+                .card-header {
+                    padding: 2px 0;
+                    background: $theme-color;
+                    button{
+                        color: #ffffff;
+                        /* font-weight: bold; */
                         font-size: 0.9rem;
-                    }                      
-                    label{
-                        font-size: 0.9rem;
-                        color: #000000;
                     }
+                    // .switchCheck {
+                    //     margin-top: 0.65rem;
+                    //     .slideBtn:before {
+                    //         background-color: #d4d2d3;
+                    //     }
+                    //     input:checked + .slideBtn:before {
+                    //         background-color: #fed363;
+                    //     }
+                    //     input:checked + .slideBtn {
+                    //         background-color: #d3a53b;
+                    //     }
+                    // }
+                }
+                &:first-child{
+                    border-top: 0 !important;
+                    border-radius: 25px 25px 0 0;
+                    overflow: hidden;
+                }                
+                &:last-child{
+                    border-radius: 0 0 25px 25px;
+                    overflow: hidden;
+                }
+                .card-body {
+                    background: #ffebbf;
+                    & > label{
+                        font-size: 0.9rem;
+                    }
+                    .form-group{
+                        .form-control {
+                            font-size: 0.9rem;
+                        }                      
+                        label{
+                            font-size: 0.9rem;
+                            color: #000000;
+                        }
+                    }
+                }
+                textarea{
+                    box-shadow: none !important;
+                    border-radius: 10px !important;
                 }
             }
            .form-group{
@@ -83,6 +108,62 @@
               
             }
         }    
+    }
+    .themeEditOptions{
+        label{
+            font-size: 0.9rem;
+        }
+        position: relative;
+        .editOptionsBody {
+            .availableHeaderBgs {
+                justify-content: center;
+                flex-wrap: wrap;
+                .pattern {
+                    width: 170px;
+                    border: 5px solid #fff;
+                    background: #ffffff;
+                    margin: 2px;
+                    border-radius: 3px;
+                    cursor: pointer;
+                    &.selected{
+                        border: 5px solid #66bb6a;
+                        box-shadow: 0px 2px 2px rgba(0,0,0,0.2);
+                    }
+                }
+               
+            }
+        }
+        
+        .previewBtn{
+            position: absolute;
+            right: -8px;
+            top: 0;
+            background-color: #ffffff;
+            transform: skewX(20deg);
+            border: 0;
+            padding: 8px 10px;
+            border-radius: 0 0 0 10px;
+            transform: skewX(20deg) !important;
+            font-size: 12px;
+            span{
+                transform: skewX(-20deg) !important;
+                display: inline-block;
+                font-size: 12px !important;
+                font-weight: bold;
+                i{
+                    font-size: 17px !important;
+                    vertical-align: middle;
+                    margin-right: 5px;
+                }
+            }
+            &:hover{
+                background: rgb(255,255,255);
+                background: -moz-linear-gradient(274deg, rgba(255,255,255,1) 12%, rgba(211,165,59,1) 100%);
+                background: -webkit-linear-gradient(274deg, rgba(255,255,255,1) 12%, rgba(211,165,59,1) 100%);
+                background: linear-gradient(274deg, rgba(255,255,255,1) 12%, rgba(211,165,59,1) 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#d3a53b",GradientType=1);
+            }
+        }
     }
     h2.heading{
         // @include align-all-center;
@@ -138,6 +219,25 @@
                 color:#ffffff;
                 background: rgba(255,255,255,0.15);
                 border-radius: 0 50px 50px 0;
+            }
+        }
+        .imgDroppableSec{
+            .dropzone{
+                width: 100%;
+                height: 52px;
+                display: flex;
+                align-items: center;
+                justify-content: center;               
+                border-radius: 10px;
+                border: 1px dashed #a9a4a4;
+                cursor: pointer;
+                .text-wrapper{
+                    font-size: 0.75rem;
+                    font-weight: bold;
+                }
+                &:hover{
+                    background-color: #ffffff;
+                }
             }
         }
     }
