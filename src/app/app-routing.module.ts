@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { PaymentComponent }from './payment/payment.component'
+import { PaymentComponent } from './payment/payment.component';
 
 const routes: Routes = [
   {
@@ -15,7 +15,7 @@ const routes: Routes = [
   },
   {
     path: 'payment',
-    component:PaymentComponent
+    component: PaymentComponent,
   },
   {
     path: '',

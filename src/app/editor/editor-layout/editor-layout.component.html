@@ -1,157 +1,192 @@
 <div class="d-flex themeEditorContainer">
-	<div class="flex-1 themeEditOptions d-flex flex-column py-3 pr-3 pl-5">
-		<h2 class="heading"><button class="backBtn"><i class="fas fa-chevron-circle-left"></i></button> Edit Theme</h2>
-		<div class="flex-1 editOptionsBody pr-3 overflow-auto">
-            <div class="py-3 urlFormGroup">
-                <label for="basic-url">Your vanity URL</label>
-                <div class="input-group mb-3">
-                    <div class="input-group-prepend"> <span class="input-group-text" id="basic-addon3">https://www.webgifts.in/</span>
-                    </div>
-                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
-                </div>
-            </div>
-            <div class="accordion" id="accordionExample">
-                <div class="card">
-                    <div class="card-header" id="headingOne">
-                        <h5 class="mb-0">
-                  <button class="btn " type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                   Header Section
-                  </button>
-                </h5>
-                    </div>
-                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                        <div class="card-body">
-                            <label for="basic-url">Add Header Image</label>
-                            <div class="input-group">
-                                <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="inputGroupFile02">
-                                    <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choose file</label>
-                                </div>
-                                <!-- <div class="input-group-append"> <span class="input-group-text" id="inputGroupFileAddon02">Upload</span>
-                                </div> -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-header" id="headingTwo">
-                        <h5 class="mb-0">
-                  <button class="btn collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                   Title Section
-                  </button>
-                </h5>
-                    </div>
-                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                        <div class="card-body">
-                            <div class="form-group">
-                                <label for="MainTitle">Main Title</label>
-                                <input type="text" class="form-control" id="MainTitle" placeholder="Enter main title"> <small id="emailHelp" class="form-text text-muted">Ex: Happy Wedding/Birthday/Marriage/etc..." Day</small>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-header" id="headingThree">
-                        <h5 class="mb-0">
-                  <button class="btn collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    Logo Section
-                  </button>
-                </h5>
-                    </div>
-                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                        <div class="card-body">
-                            <label for="basic-url">Add Your Couple Logo</label>
-                            <div class="input-group">
-                                <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="inputGroupFile02">
-                                    <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choose file</label>
-                                </div>
-                                <!-- <div class="input-group-append"> <span class="input-group-text" id="inputGroupFileAddon02">Upload</span>
-                                </div> -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-header" id="headingFour">
-                        <h5 class="mb-0">
-                  <button class="btn collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
-                   Slider Section
-                  </button>
-                </h5>
-                    </div>
-                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
-                        <div class="card-body">
-                            <label for="basic-url">Add Slider Images</label>
-                            <div class="input-group mb-2">
-                                <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="inputGroupFile02">
-                                    <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Add Image</label>
-                                </div>
-                            </div>
-                            <div class="input-group mb-2">
-                                <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="inputGroupFile02">
-                                    <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Add Image</label>
-                                </div>
-                            </div>
-                            <div class="input-group mb-2">
-                                <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="inputGroupFile02">
-                                    <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Add Image</label>
-                                </div>
-                            </div>
-                            <button type="button" class="btn btn-primary">Add Slider Images</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-header" id="headingFive">
-                        <h5 class="mb-0">
-                  <button class="btn collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                   Message Section
-                  </button>
-                </h5>
-                    </div>
-                    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
-                        <div class="card-body">                            
-                            <div class="form-group">
-                                <label for="Message">Message</label>
-                                <textarea type="text" class="form-control" id="Message" placeholder="Enter Message"> </textarea>
-                            </div>
-                            
-                           
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-header" id="headingSix">
-                        <h5 class="mb-0">
-                  <button class="btn " type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
-                   Footer Section
-                  </button>
-                </h5>
-                    </div>
-                    <div id="collapseSix" class="collapse" aria-labelledby="FooterSix" data-parent="#accordionExample">
-                        <div class="card-body">
-                            <label for="basic-url">Add Footer Image</label>
-                            <div class="input-group">
-                                <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="inputGroupFile02">
-                                    <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choose file</label>
-                                </div>
-                                <!-- <div class="input-group-append"> <span class="input-group-text" id="inputGroupFileAddon02">Upload</span>
-                                </div> -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <button type="button" class="btn mt-4 btn-primary">Publish</button>
+  <div class="flex-1 themeEditOptions d-flex flex-column py-3 pr-3 pl-5">
+    <h2 class="heading">
+      <button class="backBtn">
+        <i class="fas fa-chevron-circle-left"></i>
+      </button>
+      Edit Theme
+    </h2>
+    <div class="flex-1 editOptionsBody pr-3 overflow-auto">
+      <div class="py-3 urlFormGroup">
+        <label for="basic-url">Your vanity URL</label>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon3">https://www.webgifts.in/</span>
+          </div>
+          <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" />
         </div>
-	</div>
-	<div class="selectedTheme">
-		<router-outlet></router-outlet>
-		
-	</div>
+      </div>
+      <div class="accordion" id="accordionExample">
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+              <button class="btn" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                aria-controls="collapseOne">
+                Header Section
+              </button>
+            </h5>
+          </div>
+          <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="card-body">
+              <label for="basic-url">Add Header Image</label>
+              <div class="input-group">
+                <div class="custom-file">
+                  <input type="file" class="custom-file-input" id="inputGroupFile02" />
+                  <label class="custom-file-label" for="inputGroupFile02"
+                    aria-describedby="inputGroupFileAddon02">Choose file</label>
+                </div>
+                <!-- <div class="input-group-append"> <span class="input-group-text" id="inputGroupFileAddon02">Upload</span>
+                                </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingTwo">
+            <h5 class="mb-0">
+              <button class="btn collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo"
+                aria-expanded="false" aria-controls="collapseTwo">
+                Title Section
+              </button>
+            </h5>
+          </div>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+            <div class="card-body">
+              <div class="form-group">
+                <label for="MainTitle">Main Title</label>
+                <input type="text" class="form-control" id="MainTitle" placeholder="Enter main title" />
+                <small id="emailHelp" class="form-text text-muted">Ex: Happy Wedding/Birthday/Marriage/etc..."
+                  Day</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingThree">
+            <h5 class="mb-0">
+              <button class="btn collapsed" type="button" data-toggle="collapse" data-target="#collapseThree"
+                aria-expanded="false" aria-controls="collapseThree">
+                Logo Section
+              </button>
+            </h5>
+          </div>
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+            <div class="card-body">
+              <label for="basic-url">Add Your Couple Logo</label>
+              <div class="input-group">
+                <div class="custom-file">
+                  <input type="file" class="custom-file-input" id="inputGroupFile02" />
+                  <label class="custom-file-label" for="inputGroupFile02"
+                    aria-describedby="inputGroupFileAddon02">Choose file</label>
+                </div>
+                <!-- <div class="input-group-append"> <span class="input-group-text" id="inputGroupFileAddon02">Upload</span>
+                                </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingFour">
+            <h5 class="mb-0">
+              <button class="btn collapsed" type="button" data-toggle="collapse" data-target="#collapseFour"
+                aria-expanded="false" aria-controls="collapseThree">
+                Slider Section
+              </button>
+            </h5>
+          </div>
+          <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+            <div class="card-body">
+              <label for="basic-url">Add Slider Images</label>
+              <input type="file" hidden #profilePicInput (change)="selectProfilePic($event)" multiple />
+              <div class="rmpm dropzone" appDrag (draggedfiles)="filesDropped($event)"
+                (browsefile)="openBrowseFileWindow()">
+                <div class="text-wrapper">
+                  Drop your pic here!
+                </div>
+              </div>
+              <div *ngFor="let file of carouselImages">
+                <img [src]="file.url" width="100px" height="100px" />
+              </div>
+
+              <!-- <img [src]="croppedImage" /> -->
+              <div class="input-group mb-2">
+                <div class="custom-file">
+                  <input type="file" class="custom-file-input" id="inputGroupFile02" />
+                  <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Add
+                    Image</label>
+                </div>
+              </div>
+              <div class="input-group mb-2">
+                <div class="custom-file">
+                  <input type="file" class="custom-file-input" id="inputGroupFile02" />
+                  <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Add
+                    Image</label>
+                </div>
+              </div>
+              <div class="input-group mb-2">
+                <div class="custom-file">
+                  <input type="file" class="custom-file-input" id="inputGroupFile02" />
+                  <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Add
+                    Image</label>
+                </div>
+              </div>
+              <button type="button" class="btn btn-primary">
+                Add Slider Images
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingFive">
+            <h5 class="mb-0">
+              <button class="btn collapsed" type="button" data-toggle="collapse" data-target="#collapseFive"
+                aria-expanded="false" aria-controls="collapseFive">
+                Message Section
+              </button>
+              <app-picker></app-picker>
+            </h5>
+          </div>
+          <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+            <div class="card-body">
+              <div class="form-group">
+                <label for="Message">Message</label>
+                <textarea type="text" class="form-control" id="Message" placeholder="Enter Message">
+                </textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingSix">
+            <h5 class="mb-0">
+              <button class="btn" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="true"
+                aria-controls="collapseSix">
+                Footer Section
+              </button>
+            </h5>
+          </div>
+          <div id="collapseSix" class="collapse" aria-labelledby="FooterSix" data-parent="#accordionExample">
+            <div class="card-body">
+              <label for="basic-url">Add Footer Image</label>
+              <div class="input-group">
+                <div class="custom-file">
+                  <input type="file" class="custom-file-input" id="inputGroupFile02" />
+                  <label class="custom-file-label" for="inputGroupFile02"
+                    aria-describedby="inputGroupFileAddon02">Choose file</label>
+                </div>
+                <!-- <div class="input-group-append"> <span class="input-group-text" id="inputGroupFileAddon02">Upload</span>
+                                </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button type="button" class="btn mt-4 btn-primary">Publish</button>
+    </div>
+  </div>
+  <div class="selectedTheme">
+    <router-outlet></router-outlet>
+  </div>
 </div>
+<app-cropper-modal *ngIf="files.length" [carouselFiles]="files"
+  (saveImagesEmitter)="getCarouselImagesFromModal($event)"></app-cropper-modal>
