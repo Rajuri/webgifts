@@ -33,7 +33,7 @@
                                </div>
                             </div>
                            <hr>
-                           <div class="mt-3 pl-0">
+                           <div class="mt-3 row m-0">
                             <label class="custRadio">No Background Pattern
                                 <input type="radio"  name="bodyBg" [(ngModel)]="bodyBg"  [value]="false" [checked]="!bodyBg">
                                 <span class="checkmark"></span>
@@ -41,9 +41,8 @@
                             <div class="availableHeaderBgs d-flex mt-3" *ngIf="!bodyBg">
                               no bg
                             </div>                      
-                        </div>
-
-                            <div class="mt-3 pl-0">
+                            </div>
+                            <div class="mt-3 row m-0">
                                 <label class="custRadio">Background Pattern
                                     <input type="radio"  name="bodyBg" [(ngModel)]="bodyBg"  [value]="true" [checked]="bodyBg">
                                     <span class="checkmark"></span>
@@ -59,10 +58,8 @@
                                         <img src="assets/images/themes/headerPatterns/header1.png" class="w-100">
                                     </div>
                                 </div>                      
-                            </div>
-                         
-
-                            <div class="mt-3 pl-0">
+                            </div>                        
+                            <div class="mt-3 row m-0">
                                 <label class="custRadio">Custom Background Pattern
                                     <input type="radio" name="bodyBg"  [(ngModel)]="bodyBg" [value]="false" [checked]="!bodyBg">
                                     <span class="checkmark"></span>
@@ -79,17 +76,7 @@
                                       <img [src]="file.url" width="100px" height="100px" />
                                     </div>
                                 </div>
-
-                                <!-- <div class="input-group" *ngIf="!bodyBg">
-                                
-                                    <div class="custom-file">
-                                        <input type="file" class="custom-file-input" id="inputGroupFile02">
-                                        <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choose file</label>
-                                    </div>
-                                </div>                           -->
                             </div>
-                           
-
                         </div>
                     </div>
                 </div>
@@ -108,43 +95,52 @@
                     </div>
                     <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                         <div class="card-body">
-                            <div class="mt-3 pl-0">
-                                <label class="custRadio">Header Patterns
-                                    <input type="radio"  name="headerPattern" [(ngModel)]="headerPattern"  [value]="true" [checked]="headerPattern">
-                                    <span class="checkmark"></span>
-                                </label>                                
-                            </div>
-                            <div class="availableHeaderBgs d-flex mt-3" *ngIf="headerPattern">
-                                <div class="pattern">
-                                   <img src="assets/images/themes/headerPatterns/header1.png" class="w-100">
+                            <div class="row m-0">
+                                <div class="mt-3 pl-0">
+                                    <label class="custRadio">Header Patterns
+                                        <input type="radio"  name="headerPattern" [(ngModel)]="headerPattern"  [value]="true" [checked]="headerPattern">
+                                        <span class="checkmark"></span>
+                                    </label>                                
                                 </div>
-                                <div class="pattern selected">
-                                    <img src="assets/images/themes/headerPatterns/header1.png" class="w-100">
-                                </div>
-                                <div class="pattern">
-                                    <img src="assets/images/themes/headerPatterns/header1.png" class="w-100">
-                                </div>
-                                <div class="pattern">
-                                    <img src="assets/images/themes/headerPatterns/header1.png" class="w-100">
-                                </div>
-                                <div class="pattern">
-                                    <img src="assets/images/themes/headerPatterns/header1.png" class="w-100">
+                                <div class="availableHeaderBgs d-flex mt-3" *ngIf="headerPattern">
+                                    <div class="pattern">
+                                       <img src="assets/images/themes/headerPatterns/header1.png" class="w-100">
+                                    </div>
+                                    <div class="pattern selected">
+                                        <img src="assets/images/themes/headerPatterns/header1.png" class="w-100">
+                                    </div>
+                                    <div class="pattern">
+                                        <img src="assets/images/themes/headerPatterns/header1.png" class="w-100">
+                                    </div>
+                                    <div class="pattern">
+                                        <img src="assets/images/themes/headerPatterns/header1.png" class="w-100">
+                                    </div>
+                                    <div class="pattern">
+                                        <img src="assets/images/themes/headerPatterns/header1.png" class="w-100">
+                                    </div>
                                 </div>
                             </div>
 
+                           <div class="row m-0">
                             <div class="mt-3 pl-0">
                                 <label class="custRadio">Add Custom Header Image
                                     <input type="radio" name="headerPattern"  [(ngModel)]="headerPattern" [value]="false" [checked]="!headerPattern">
                                     <span class="checkmark"></span>
                                 </label>                                
                             </div>
-                            <div class="input-group" *ngIf="!headerPattern">
-                                
-                                <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="inputGroupFile02">
-                                    <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choose file</label>
+                            <div class="input-group imgDroppableSec mb-2" *ngIf="!headerPattern">
+                                <input type="file" hidden #profilePicInput (change)="selectProfilePic($event)" multiple />
+                                <div class="rmpm dropzone" appDrag (draggedfiles)="filesDropped($event)"
+                                    (browsefile)="openBrowseFileWindow()">
+                                    <div class="text-wrapper">
+                                    Click to Header image or Drop Header image
+                                    </div>
+                                </div>
+                                <div *ngFor="let file of carouselImages">
+                                    <img [src]="file.url" width="100px" height="100px" />
                                 </div>
                             </div>
+                           </div>
                             
                             <hr>
                             <div class="form-check mt-3 pl-0">
@@ -175,6 +171,43 @@
                                 <label for="MainTitle">Main Title</label>
                                 <input type="text" class="form-control" id="MainTitle" placeholder="Enter main title"> <small id="emailHelp" class="form-text text-muted">Ex: Happy Wedding/Birthday/Marriage/etc..." Day</small>
                             </div>
+                            <div class="row">
+                                <div class="form-group col-6">                                   
+                                      <label class="" for="inputGroupSelect01">Font Style</label>                                 
+                                    <select class="custom-select" id="inputGroupSelect01">
+                                      <option selected>Arial</option>
+                                      <option value="1">Times New Roman</option>
+                                      <option value="2">Roboto</option>
+                                      <option value="3">Oswald</option>
+                                    </select>
+                                  </div>
+                                  <div class="form-group col-6">
+                                    <label for="formControlRange">Font size</label>
+                                    <input type="range" class="form-control-range" id="formControlRange">
+                                </div>
+                              
+                            </div>
+                            <div class="row">                               
+                                <div class="form-group col-6">
+                                    <label for="MainTitle">Font Weight</label>
+                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                        <label class="btn btn-secondary active">
+                                          <input type="radio" name="font-weight" id="Normal" autocomplete="off" checked> Normal
+                                        </label>
+                                        <label class="btn btn-secondary">
+                                          <input type="radio" name="font-weight" id="NormalBold" autocomplete="off"> Normal Bold
+                                        </label>
+                                        <label class="btn btn-secondary">
+                                          <input type="radio" name="font-weight" id="Bold" autocomplete="off"> Bold
+                                        </label>
+                                      </div>
+                                </div>
+                                <div class="form-group col-6">                                   
+                                    <label class="" for="inputGroupSelect01">Font Color</label>                                 
+                                    <app-picker></app-picker>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -192,15 +225,48 @@
                     </div>
                     <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                         <div class="card-body">
-                            <label for="basic-url">Add Your Couple Logo</label>
+                            <!-- <label for="basic-url">Add Your Couple Logo</label>
                             <div class="input-group">
                                 <div class="custom-file">
                                     <input type="file" class="custom-file-input" id="inputGroupFile02">
                                     <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choose file</label>
                                 </div>
-                                <!-- <div class="input-group-append"> <span class="input-group-text" id="inputGroupFileAddon02">Upload</span>
-                                </div> -->
+                            </div> -->
+                                                
+                            <div class="mt-3 row m-0">
+                                <label class="custRadio">Add your couple logo
+                                    <input type="radio" name="coupleLogo"  [(ngModel)]="coupleLogo" [value]="true" [checked]="coupleLogo">
+                                    <span class="checkmark"></span>
+                                </label> 
+                                <div class="input-group imgDroppableSec" *ngIf="coupleLogo">
+                                    <input type="file" hidden #profilePicInput (change)="selectProfilePic($event)" multiple />
+                                    <div class="rmpm dropzone" appDrag (draggedfiles)="filesDropped($event)"
+                                      (browsefile)="openBrowseFileWindow()">
+                                      <div class="text-wrapper">
+                                        Click to add logo or Drop logo 
+                                      </div>
+                                    </div>
+                                    <div *ngFor="let file of carouselImages">
+                                      <img [src]="file.url" width="100px" height="50px" />
+                                    </div>
+                                </div>
                             </div>
+                            <div class="mt-3 row m-0">
+                                <div class="col-12 p-0">
+                                    <label class="custRadio">Add custom couple logo
+                                        <input type="radio"  name="coupleLogo" [(ngModel)]="coupleLogo"  [value]="false" [checked]="!coupleLogo">
+                                        <span class="checkmark"></span>
+                                    </label>   
+                                </div>       
+                                <div class="col-12 p-0" *ngIf="!coupleLogo">
+                                    <div class="form-group">
+                                        <label for="coupleLogo">Enter couple logo name</label>
+                                        <input type="text" class="form-control" id="coupleLogo" placeholder="Enter couple logo"> 
+                                    </div>
+                                </div>    
+             
+                            </div>    
+                            
                         </div>
                     </div>
                 </div>
@@ -218,14 +284,20 @@
                     </div>
                     <div id="collapseDp" class="collapse" aria-labelledby="headingDp" data-parent="#accordionExample">
                         <div class="card-body">
-                            <label for="basic-url">Add DP</label>
+                            <label for="basic-url">Add Display Pciture</label>
                             <div class="input-group mb-2">
-                                <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="inputGroupFile02">
-                                    <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choose file</label>
+                                <div class="input-group- imgDroppableSec">
+                                    <input type="file" hidden #profilePicInput (change)="selectProfilePic($event)" multiple />
+                                    <div class="rmpm dropzone" appDrag (draggedfiles)="filesDropped($event)"
+                                      (browsefile)="openBrowseFileWindow()">
+                                      <div class="text-wrapper">
+                                        Click to add DP or Drop DP
+                                      </div>
+                                    </div>
+                                    <div *ngFor="let file of carouselImages">
+                                      <img [src]="file.url" width="100px" height="50px" />
+                                    </div>
                                 </div>
-                                <!-- <div class="input-group-append"> <span class="input-group-text" id="inputGroupFileAddon02">Upload</span>
-                                </div> -->
                             </div>
                             <div class="form-group mb-2">
                                 <label for="firstPersonName">Add First Person Name</label>
@@ -235,6 +307,10 @@
                                 <label for="firstSecondName">Add Second Person Name</label>
                                 <input type="text" class="form-control" id="firstSecondName" placeholder="Enter name">
                             </div> 
+                            <div class="form-group mb-2-">
+                                <label for="firstSecondName">Add Text Color</label>
+                                <app-picker></app-picker>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -265,8 +341,25 @@
                                   <img [src]="file.url" width="100px" height="100px" />
                                 </div>
                             </div>
-              
-                            <button type="button" class="btn btn-primary">Add Slider Images</button>
+                            <div class="form-check my-3 pl-0">
+                                <label class="switchCheck">
+                                    <input type="checkbox" checked id="bottomShade1">
+                                    <span class="slideBtn"></span> 
+                                  </label>
+                                  <label for="bottomShade1">Auto Slide</label>
+                            </div>
+                            <div class="form-group mb-2-">
+                                <label for="firstSecondName">Slide1 Text</label>
+                                <input type="text" class="form-control" id="firstSecondName" placeholder="Enter name">
+                            </div> 
+                            <div class="form-group mb-2-">
+                                <label for="firstSecondName">Slide2 Text</label>
+                                <input type="text" class="form-control" id="firstSecondName" placeholder="Enter name">
+                            </div> 
+                            <div class="form-group mb-2-">
+                                <label for="firstSecondName">Slide3 Text</label>
+                                <input type="text" class="form-control" id="firstSecondName" placeholder="Enter name">
+                            </div> 
                         </div>
                     </div>
                 </div>
@@ -292,12 +385,16 @@
                     </div>
                 </div>
                 <div class="card">
-                    <div class="card-header">
+                    <div class="card-header d-flex">
                         <h5 class="mb-0">
                         <button class="btn " type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
                         Background Audio Clip Section
                         </button>
                         </h5>
+                        <div class="roundCheck ml-auto mr-2">
+                            <input type="checkbox" id="checkbox4" checked/>
+                            <label for="checkbox4"></label>
+                        </div>
                     </div>
                     <div id="collapseSix" class="collapse" aria-labelledby="FooterSix" data-parent="#accordionExample">
                         <div class="card-body">
@@ -375,15 +472,64 @@
                         </div>
                     </div>
                     <div id="collapseSeven" class="collapse" aria-labelledby="FooterSeven" data-parent="#accordionExample">
-                        <div class="card-body">
-                            <label for="basic-url">Add Footer Image</label>
-                            <div class="input-group">
-                                <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="inputGroupFile02">
-                                    <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choose file</label>
+                        <div class="card-body">                         
+                            <div class="row m-0">
+                                <div class="mt-3 pl-0">
+                                    <label class="custRadio">Add Footer Image
+                                        <input type="radio"  name="headerPattern" [(ngModel)]="headerPattern"  [value]="true" [checked]="headerPattern">
+                                        <span class="checkmark"></span>
+                                    </label>                                
                                 </div>
-                                <!-- <div class="input-group-append"> <span class="input-group-text" id="inputGroupFileAddon02">Upload</span>
-                                </div> -->
+                                <div class="availableHeaderBgs d-flex mt-3" *ngIf="headerPattern">
+                                    <div class="pattern">
+                                       <img src="assets/images/themes/headerPatterns/header1.png" class="w-100">
+                                    </div>
+                                    <div class="pattern selected">
+                                        <img src="assets/images/themes/headerPatterns/header1.png" class="w-100">
+                                    </div>
+                                    <div class="pattern">
+                                        <img src="assets/images/themes/headerPatterns/header1.png" class="w-100">
+                                    </div>
+                                    <div class="pattern">
+                                        <img src="assets/images/themes/headerPatterns/header1.png" class="w-100">
+                                    </div>
+                                    <div class="pattern">
+                                        <img src="assets/images/themes/headerPatterns/header1.png" class="w-100">
+                                    </div>
+                                </div>
+                            </div>
+
+                           <div class="row m-0">
+                            <div class="mt-3 pl-0">
+                                <label class="custRadio">Add Custom Footer Image
+                                    <input type="radio" name="headerPattern"  [(ngModel)]="headerPattern" [value]="false" [checked]="!headerPattern">
+                                    <span class="checkmark"></span>
+                                </label>                                
+                            </div>
+                            <div class="input-group" *ngIf="!headerPattern">
+                                
+                                <div class="imgDroppableSec mb-2">
+                                    <input type="file" hidden #profilePicInput (change)="selectProfilePic($event)" multiple />
+                                    <div class="rmpm dropzone" appDrag (draggedfiles)="filesDropped($event)"
+                                      (browsefile)="openBrowseFileWindow()">
+                                      <div class="text-wrapper">
+                                        Click to footer images or Drop footer image
+                                      </div>
+                                    </div>
+                                    <div *ngFor="let file of carouselImages">
+                                      <img [src]="file.url" width="100px" height="100px" />
+                                    </div>
+                                </div>
+                            </div>
+                           </div>
+                            
+                            <hr>
+                            <div class="form-check mt-3 pl-0">
+                                <label class="switchCheck">
+                                    <input type="checkbox" checked id="bottomShade1">
+                                    <span class="slideBtn"></span> 
+                                  </label>
+                                  <label for="bottomShade1">Top Shade </label>
                             </div>
                         </div>
                     </div>

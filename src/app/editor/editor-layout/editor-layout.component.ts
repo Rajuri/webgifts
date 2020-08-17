@@ -12,6 +12,7 @@ declare var $: any;
 export class EditorLayoutComponent implements OnInit {
   headerPattern : boolean = true;
   bodyBg : boolean = true;
+  coupleLogo : boolean = true;
   @ViewChild('profilePicInput', { static: false }) profilePicInput: ElementRef;
   carouselImages = [];
   files: FileHandle[] = [];
@@ -50,3 +51,4 @@ export class EditorLayoutComponent implements OnInit {
     this.carouselImages = $event;
   }
 }
+

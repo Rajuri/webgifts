@@ -66,9 +66,9 @@ button {
   margin-bottom: 0;
 }
 .colorPickerBox{
-  width: 40px;
-  height: 40px;
-  padding: 5px;
+  width: 36px;
+  height: 36px;
+  padding: 4px;
   border-radius: 10px;
   background: rgb(34,40,195);
   background: -moz-linear-gradient(120deg, rgba(34,40,195,1) 0%, rgba(45,253,83,1) 100%);
@@ -82,7 +82,15 @@ button {
     outline: none;
     color: transparent;
     border:3px solid #dddddd;
+    cursor: pointer;
   }
+}
+label{
+  margin-bottom: 0.3rem !important;
+}
+button{
+  box-shadow: none;
+  outline: none;
 }
 .theme-btn1{
   @include theme-btn1;
