@@ -8,7 +8,7 @@
             <h4 class="modal-title">Preview and Cropping</h4>
             <button type="button" class="close">&times;</button>
           </div>
-          <div class="flex-1 overflow-auto">
+          <div class="flex-1 overflow-auto allImgBlock">
             <div class="droppedImagesBasket d-flex">
               <div *ngFor="let file of carouselFiles" class="" (click)="previewImage(file)">
                 <img *ngIf="file" [src]="file.url" width="100px" height="100px" />
