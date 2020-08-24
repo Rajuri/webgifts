@@ -1,14 +1,55 @@
 /* You can add global styles to this file, and also import other style files */
+
+
 $theme-color: #e31582;
 $white-color:#ffffff;
 $black-color:#000000;
 $second-color:#d3a53b;
 
-$montserrat-alternates: 'Montserrat Alternates';
-$baloo-chettan: 'Baloo Chettan';
-$cinzel-decorative: 'Cinzel Decorative';
-$pacifico:'Pacifico';
-$chilanka:'Chilanka';
-$dancing:'Dancing';
-$great-vibes:'Great Vibes';
-$russo-one:'Russo One';
+// All Font Families
+$font1: 'Akronim', cursive;
+$font2: 'Alex Brush', cursive;
+$font3: 'Architects Daughter', cursive;
+$font4: 'Arizonia', cursive;
+$font5: 'Audiowide', cursive;
+$font6: 'Averia Serif Libre', cursive;
+$font7: 'Baloo Chettan 2', cursive;
+$font8: 'Bebas Neue', cursive;
+$font9: 'Chewy', cursive;
+$font10: 'Chilanka', cursive;
+$font11: 'Cinzel Decorative', cursive;
+$font12: 'Cinzel', serif;
+$font13: 'Concert One', cursive;
+$font14: 'Fredericka the Great', cursive;
+$font15: 'Fredoka One', cursive;
+$font16: 'Great Vibes', cursive;
+$font17: 'Jura', sans-serif;
+$font18: 'Kaushan Script', cursive;
+$font19: 'Krona One', sans-serif;
+$font20: 'Maven Pro', sans-serif;
+$font21: 'Merienda', cursive;
+$font22: 'Monoton', cursive;
+$font23: 'Montez', cursive;
+$font24: 'Montserrat', sans-serif;
+$font25: 'Montserrat Alternates', sans-serif;
+$font26: 'Nunito', sans-serif;
+$font27: 'Orbitron', sans-serif;
+$font28: 'Pacifico', cursive;
+$font29: 'Pangolin', cursive;
+$font30: 'Parisienne', cursive;
+$font31: 'Philosopher', sans-serif;
+$font32: 'Rajdhani', sans-serif;
+$font33: 'Roboto Slab', serif;
+$font34: 'Russo One', sans-serif;
+$font35: 'Special Elite', cursive;
+$font36: 'Tangerine', cursive;
+
+:root{
+    // Theme Gereral
+    --theme-bg:#333;
+    // Theme Title Section
+    --h1-font-color:#f3b428;
+    --h1-font-size:34px;
+    --h1-font-family: #{$font15} !important;
+    --h1-font-weight: normal;
+}

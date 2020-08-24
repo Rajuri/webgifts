@@ -1,6 +1,8 @@
-$theme-color : #ff0000;
-// background:lighten($theme-color, 10%);
-
+@import "../../../scss/variables.scss";
+@import "../../../scss/mixins.scss";
+// @import '../../scss/mixins.scss';
+// @import '../../scss/variables.scss';
+$theme-color: #333333;
 :host{
 margin: auto;
 height: 100%;
@@ -10,7 +12,7 @@ overflow: auto;
     background:$theme-color;
     border-radius: 30px;
     /* height: 100%; */
-    width: 600px;
+    width: 100%;
     overflow: hidden;
     header{
         position: relative;
@@ -54,4 +56,53 @@ overflow: auto;
 
         }   
     } 
+    .titleSection{
+        display: inline-block;
+        h1{
+            font-family: var(--h1-font-family);
+            color:var(--h1-font-color);
+            font-weight: var(--h1-font-weight) !important;
+            font-size: var(--h1-font-size) !important;
+        }
+    }
+    .logoSection{
+        .customLogo{
+            min-width: 300px;
+            max-width: 100%;
+        }
+        .autoLogo{
+            .name{
+                position: relative;
+                color: #ffffff;
+                display: inline-block;
+                font-size:70px;
+                // font-family: $font23;
+                // font-family: 'Akronim', cursive;
+                font-family: 'Great Vibes', cursive;
+                transform: rotate(-5deg);
+                .heart1{
+                    position: absolute;
+                    right: -30px;
+                    bottom: calc(100% - 74px);
+                    color: #ff2121;
+                    font-size: 120px;
+                    z-index: -1;
+                }
+                .heart2{
+                    position: absolute;
+                    right: 57px;
+                    top: calc(100% + 20px);
+                    color: #ff2121;
+                    font-size: 28px;
+                }
+                .heart3{
+                    position: absolute;
+                    left: -35px;
+                    top: calc(100% - 48px);
+                    color: #ff2121;
+                    font-size: 24px;
+                }
+            }
+        }
+    }
 } 

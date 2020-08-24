@@ -2,9 +2,14 @@
   <header class="bottomShadow">
     <img src="assets/images/themes/images/header.png">
   </header>
-  <h1 class="titleSection text-center">Happy Wedding Anniversary</h1>
-  <section class="logoSection text-center">
-    <img src="assets/images/themes/images/couple-logo.png">
+  <section class="titleSection px-5 my-2 text-center">
+    <h1 class="">Happy Wedding Anniversary</h1>
+  </section>
+  <section class="logoSection px-5 my-2 text-center">
+    <!-- <img class="customLogo" src="assets/images/themes/images/couple-logo.png"> -->
+    <div class="autoLogo mt-5">
+    <p class="name">Youandme <i class="heart1 far fa-heart"></i> <i class="heart2 fas fa-heart"></i> <i class="heart3 fas fa-heart"></i> </p>
+    </div>
   </section>
   <section class="sliderSection p-5">
     <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig" (init)="slickInit($event)"

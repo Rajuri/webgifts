@@ -12,7 +12,7 @@ export class Bdt101Component implements OnInit {
     {img: "assets/images/themes/images/slide1.png"},
     {img: "assets/images/themes/images/slide2.png"}
   ];
-  slideConfig = { slidesToShow: 2, slidesToScroll: 2 };
+  slideConfig = { slidesToShow: 1, slidesToScroll: 1 };
 
   constructor() {}
 

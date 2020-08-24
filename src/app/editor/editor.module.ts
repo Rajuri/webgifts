@@ -13,6 +13,7 @@ import { ColorPickModule } from '../color-pick/color-pick.module';
 import { DragDirective } from '../utilities/common_directives';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { PreviewComponent } from './preview/preview.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     Bdt101Component,
     Att101Component,
     CropperModalComponent,
+    PreviewComponent,
   ],
   imports: [
     CommonModule,
