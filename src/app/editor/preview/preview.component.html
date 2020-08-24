@@ -3,18 +3,19 @@
     <h2 class="heading"><button class="backBtn" [routerLink]="['/editor']"  ><i class="fas fa-chevron-circle-left"></i></button> Preview</h2>
 
     <div class="d-flex my-3">
-<button class="iphonePreviewBtn previewBtn mr-2"><i class="fas fa-mobile-alt"></i> Mobile Preview</button><button class="ipadPreviewBtn previewBtn ml-2"><i class="fas fa-tablet-alt"></i> Tablet Preview</button>
+<button class="iphonePreviewBtn previewBtn mr-2" (click) = iphoneDisplay() [class.active]="iphoneShow" ><i class="fas fa-mobile-alt"></i> Mobile Preview</button>
+<button class="ipadPreviewBtn previewBtn ml-2" [class.active]="ipadShow" (click) = ipadDisplay()><i class="fas fa-tablet-alt" ></i> Tablet Preview</button>
     </div>
   </div>
   <div class="rightSec previewSec flex-1">
         <!-- <router-outlet></router-outlet> -->
     <!-- <app-bdt101></app-bdt101> -->
-    <div class="ipadPreview ">
+    <div class="ipadPreview " *ngIf = 'ipadShow'>
         <app-bdt101 class="theme"></app-bdt101>
     <img  class="frame"  src="assets/images/preview/ipadFrame.png">
     
     </div>
-    <div class="iphonePreview">
+    <div class="iphonePreview" *ngIf = 'iphoneShow'>
         <app-bdt101 class="theme"></app-bdt101>
         <img class="frame" src="assets/images/preview/iphoneFrame.png">
         
