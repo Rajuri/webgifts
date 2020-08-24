@@ -128,9 +128,9 @@ export class EditorLayoutComponent implements OnInit {
     private commonSrvc: CommonService,
     private editorSrvc: EditorService,
     private elementRef: ElementRef
-  ) {}
+  ) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   getColorValue($event) {
     this.templateModel[$event.sectionName].color = $event.color;

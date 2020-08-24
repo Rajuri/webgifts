@@ -22,14 +22,8 @@ const routes: Routes = [
   },
   {
     path: 'preview',
-    component: PreviewComponent,
-    // loadChildren: () =>
-    //   import('./preview/preview.module').then((m) => m.PreviewModule),
-  },
-  {
-    path: 'preview',
-    component: Bdt101Component,
-  },
+    component: PreviewComponent
+  }
 ];
 
 @NgModule({

@@ -1,74 +1,6 @@
-<<<<<<< HEAD
-$theme-color : #ff0000;
-// background:lighten($theme-color, 10%);
-
-:host {
-  margin: auto;
-  height: 100%;
-  overflow: auto;
-}
-
-.orgTheme {
-  background: var(--template-theme-color);
-  border-radius: 30px;
-  /* height: 100%; */
-  width: 600px;
-  overflow: hidden;
-
-  header {
-    position: relative;
-    background-color: var(--template-theme-color);
-
-    img {
-      width: 100%;
-    }
-  }
-
-  .bottomShadow {
-    position: relative;
-    background-color: var(--template-theme-color);
-
-    &::before {
-      content: '';
-      position: absolute;
-      top: auto;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 90%;
-      background: -moz-linear-gradient(top, rgba(125, 185, 232, 0) 0%, var(--template-theme-color) 77%, var(--template-theme-color) 100%);
-      background: -webkit-linear-gradient(top, rgba(125, 185, 232, 0) 0%, var(--template-theme-color) 77%, var(--template-theme-color) 100%);
-      background: linear-gradient(to bottom, rgba(125, 185, 232, 0) 0%, var(--template-theme-color) 77%, var(--template-theme-color) 100%);
-      // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='var(--template-theme-color)', endColorstr='$theme-color',GradientType=0 );
-    }
-  }
-
-  .topShadow {
-    position: relative;
-    background-color: var(--template-theme-color);
-
-    &::before {
-      content: '';
-      position: absolute;
-      top: auto;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 90%;
-      background: -moz-linear-gradient(top, $theme-color 0%, var(--template-theme-color) 15%, rgba(125, 185, 232, 0) 100%);
-      background: -webkit-linear-gradient(top, $theme-color 0%, var(--template-theme-color) 15%, rgba(125, 185, 232, 0) 100%);
-      background: linear-gradient(to bottom, $theme-color 0%, var(--template-theme-color) 15%, rgba(125, 185, 232, 0) 100%);
-      // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#007db9e8',GradientType=0 );
-
-    }
-  }
-}
-=======
 @import "../../../scss/variables.scss";
 @import "../../../scss/mixins.scss";
-// @import '../../scss/mixins.scss';
-// @import '../../scss/variables.scss';
-$theme-color: #333333;
+
 :host{
 margin: auto;
 height: 100%;
@@ -172,4 +104,3 @@ overflow: auto;
         }
     }
 } 
->>>>>>> 6775cf7b47061db36fbd179a4b6e28863efb7dad
