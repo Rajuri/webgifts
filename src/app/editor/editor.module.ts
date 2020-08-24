@@ -12,6 +12,7 @@ import { ColorPickModule } from '../color-pick/color-pick.module';
 import { ImageFilesUploadModule } from '../image-files-upload/image-files-upload.module';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { PreviewComponent } from './preview/preview.component';
 
 import { EditorService } from './editor.service';
 
@@ -21,6 +22,7 @@ import { EditorService } from './editor.service';
     Bdt101Component,
     Att101Component,
     CropperModalComponent,
+    PreviewComponent,
   ],
   imports: [
     CommonModule,

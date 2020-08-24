@@ -4,16 +4,9 @@
 @include themeEditor;
 :host{
     width: 100%;    
-    h3,h4,h5{
-        font-family: $montserrat-alternates;            
-    // $baloo-chettan: 'Baloo Chettan';
-    // $cinzel-decorative: 'Cinzel Decorative';
-    // $pacifico:'Pacifico';
-    // $chilanka:'Chilanka';
-    // $dancing:'Dancing';
-    // $great-vibes:'Great Vibes';
-    // $russo-one:'Russo One';
-        }
+//     h2,h3,h4,h5{
+//   font-weight: 600;
+//         }
         .accordion{
             background: #ff4aaa;
             border-radius: 30px;
@@ -263,3 +256,4 @@
     .logoSection img {
         width: 300px;
     }
+  

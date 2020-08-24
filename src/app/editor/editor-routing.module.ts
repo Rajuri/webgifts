@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { EditorLayoutComponent } from './editor-layout/editor-layout.component';
 import { Bdt101Component } from './birthday-themes/bdt101/bdt101.component';
-
+import { PreviewComponent } from './preview/preview.component';
 const routes: Routes = [
   {
     path: '',
@@ -19,6 +19,12 @@ const routes: Routes = [
         redirectTo: 'bdt101',
       },
     ],
+  },
+  {
+    path: 'preview',
+    component: PreviewComponent,
+    // loadChildren: () =>
+    //   import('./preview/preview.module').then((m) => m.PreviewModule),
   },
   {
     path: 'preview',
