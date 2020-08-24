@@ -1,0 +1,54 @@
+{
+  "general_section": {
+    "isExist": true,
+    "bgColor": "",
+    "bgPattern": ""
+  },
+  "header_section": {
+    "isExist": true,
+    "image": "",
+    "bottomShade": ""
+  },
+  "title_section": {
+    "isExist": true,
+    "title": "",
+    "fontStyle": "",
+    "fontSize": "",
+    "fontWeight": "",
+    "fontColor": ""
+  },
+  "logo_section": {
+    "isExist": true,
+    "image": ""
+  },
+  "dp_section": {
+    "isExist": true,
+    "image": "",
+    "firstName": "",
+    "lastName": "",
+    "textColor": ""
+  },
+  "slider_section": {
+    "isExist": true,
+    "slided": [{ "text": "", "image": "" }]
+  },
+  "quote_section": {
+    "isExist": true,
+    "text": ""
+  },
+  "audio_section": {
+    "isExist": true,
+    "bgColor": "",
+    "bgPattern": ""
+  },
+  "video_section": {
+    "isExist": true,
+    "image": "",
+    "bottomShade": ""
+  },
+  "footer_section": {
+    "isExist": true,
+    "image": "",
+    "topShade": ""
+  }
+}

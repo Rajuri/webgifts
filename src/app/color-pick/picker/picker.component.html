@@ -1,4 +1,4 @@
-
 <div class="colorPickerBox">
-<input class="colorPickerInput" [(colorPicker)]="color" [style.background]="color" />
+  <input class="colorPickerInput" [(colorPicker)]="color" [style.background]="color"
+    (colorPickerChange)="getColorValue()" />
 </div>

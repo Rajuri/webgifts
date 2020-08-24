@@ -1,0 +1,6 @@
+<input type="file" hidden #imageFileInput (change)="selectProfilePic($event)" />
+<div class="rmpm dropzone" appDrag (draggedfiles)="filesDropped($event)" (browsefile)="openBrowseFileWindow()">
+  <div class="text-wrapper">
+    Click to Header image or Drop Header image
+  </div>
+</div>

@@ -2,6 +2,10 @@
 @import "./app/scss/variables.scss";
 @import "./app/scss/mixins.scss";
 
+:root {
+  --template-theme-color: #ff0000;
+}
+
 
 * {
   // font-family: 'Baloo Chettan', ;
@@ -12,9 +16,11 @@
 
 
 
-input, .custom-file-label{
+input,
+.custom-file-label {
   box-shadow: none !important;
 }
+
 p {
   line-height: 2rem;
 }
@@ -55,9 +61,11 @@ button {
   background-color: lighten($theme-color, 15%);
   border-radius: 5px;
 }
+
 .form-check {
   padding-left: 0px;
 }
+
 .form-check label {
   align-items: center;
   vertical-align: middle;
@@ -65,56 +73,65 @@ button {
   font-size: 0.9rem;
   margin-bottom: 0;
 }
-.colorPickerBox{
+
+.colorPickerBox {
   width: 36px;
   height: 36px;
   padding: 4px;
   border-radius: 10px;
-  background: rgb(34,40,195);
-  background: -moz-linear-gradient(120deg, rgba(34,40,195,1) 0%, rgba(45,253,83,1) 100%);
-  background: -webkit-linear-gradient(120deg, rgba(34,40,195,1) 0%, rgba(45,253,83,1) 100%);
-  background: linear-gradient(120deg, rgba(34,40,195,1) 0%, rgba(45,253,83,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2228c3",endColorstr="#2dfd53",GradientType=1);
-  .colorPickerInput{
+  background: rgb(34, 40, 195);
+  background: -moz-linear-gradient(120deg, rgba(34, 40, 195, 1) 0%, rgba(45, 253, 83, 1) 100%);
+  background: -webkit-linear-gradient(120deg, rgba(34, 40, 195, 1) 0%, rgba(45, 253, 83, 1) 100%);
+  background: linear-gradient(120deg, rgba(34, 40, 195, 1) 0%, rgba(45, 253, 83, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2228c3", endColorstr="#2dfd53", GradientType=1);
+
+  .colorPickerInput {
     width: 100%;
     height: 100%;
     border-radius: 50%;
     outline: none;
     color: transparent;
-    border:3px solid #dddddd;
+    border: 3px solid #dddddd;
     cursor: pointer;
   }
 }
-label{
+
+label {
   margin-bottom: 0.3rem !important;
 }
-button{
+
+button {
   box-shadow: none;
   outline: none;
 }
-.theme-btn1{
+
+.theme-btn1 {
   @include theme-btn1;
 }
-.theme-btn2{
+
+.theme-btn2 {
   @include theme-btn2;
 }
-.modal{
-  .modal-dialog{
+
+.modal {
+  .modal-dialog {
     .modal-content {
       border-radius: 2rem;
+
       // .modal-body{
       //   height: 500px;
       //   display: flex;
       //   flex-direction: column;
       // }
-      .modal-header{
+      .modal-header {
         .modal-title {
           margin-bottom: 0;
           line-height: 1.5;
           text-transform: lowercase;
           font-size: 1.3rem;
         }
-        button.close{
+
+        button.close {
           width: 30px;
           height: 30px;
           background: $theme-color;

@@ -8,25 +8,23 @@ const routes: Routes = [
   {
     path: '',
     component: EditorLayoutComponent,
-    children:[
+    children: [
       {
         path: '',
         component: Bdt101Component,
       },
       {
         path: '',
-        pathMatch:'full',
-        redirectTo:'bdt101'
-      }
-    ]
+        pathMatch: 'full',
+        redirectTo: 'bdt101',
+      },
+    ],
   },
   {
     path: 'preview',
     component: Bdt101Component,
   },
- 
 ];
-
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],

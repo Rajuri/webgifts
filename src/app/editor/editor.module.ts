@@ -9,14 +9,14 @@ import { EditorRoutingModule } from './editor-routing.module';
 import { CropperModalComponent } from '../components/cropper-modal/cropper-modal.component';
 
 import { ColorPickModule } from '../color-pick/color-pick.module';
-
-import { DragDirective } from '../utilities/common_directives';
+import { ImageFilesUploadModule } from '../image-files-upload/image-files-upload.module';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 
+import { EditorService } from './editor.service';
+
 @NgModule({
   declarations: [
-    DragDirective,
     EditorLayoutComponent,
     Bdt101Component,
     Att101Component,
@@ -27,9 +27,11 @@ import { ReactiveFormsModule } from '@angular/forms';
     EditorRoutingModule,
     ImageCropperModule,
     ColorPickModule,
+    ImageFilesUploadModule,
     SlickCarouselModule,
     FormsModule,
-    ReactiveFormsModule
-  ]
+    ReactiveFormsModule,
+  ],
+  providers: [EditorService],
 })
 export class EditorModule {}
